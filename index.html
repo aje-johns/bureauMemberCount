@@ -16,6 +16,11 @@
       height: 50vh;
     }
 
+    .tableHeadig {
+      font-size: 30px;
+
+    }
+
     .flex {
       display: flex;
       justify-content: space-around;
@@ -33,6 +38,11 @@
       width: 35%;
       color: aliceblue;
     }
+
+    .output-content {
+      min-width: 50vw;
+      border: 1px solid red;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
 </head>
@@ -42,11 +52,6 @@
     <!-- Geting the excel sheet Input -->
 
     <div class="user-input">
-      <h4>Select Number of Allocations</h4>
-      <input type="range" min="1" max="30" value="0" id="numberOfAllocations" />
-
-      <!-- <input type="text" id="sliderValue" /> -->
-      <h1 id="sliderValue">0</h1>
       <div class="textarea">
         <label for="">
           Input Value
@@ -59,22 +64,17 @@
     </div>
 
     <div>
-      <div class="textarea">
-        <label for="">Output Value</label>
-        <textarea name="" id="arrayOutput"></textarea>
-      </div>
-      <button id="copy">Copy Allocation</button>
+      <table id="outputTable">
+        <thead>
+          <tr>
+            <td class="tableHeadig">Data</td>
+            <td class="tableHeadig">Count</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
 
-    <table id="outputTable">
-      <thead>
-        <tr>
-          <td>UMR</td>
-          <td id="tableUserName">User Name</td>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
   </div>
 </body>
 <script src="script.js"></script>
